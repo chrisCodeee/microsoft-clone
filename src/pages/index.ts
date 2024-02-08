@@ -1,0 +1,12 @@
+export { default as Cart } from "./cart/Cart";
+export { default as Copilot } from "./coPilotPage/Copilot";
+export { default as Deals } from "./deals/Deals";
+export { default as Home } from "./homePage/Home";
+export { default as Microsoft365 } from "./microsoft365Page/MicroSoft365";
+export { default as SmallBusiness } from "./smallBusiness/SmallBusiness";
+export { default as Support } from "./support/Support";
+export { default as Surface } from "./surface/Surface";
+export { default as Teams } from "./teamsPage/Teams";
+export { default as Windows } from "./windows/Windows";
+export { default as Xbox } from "./xbox/Xbox";
+export { default as ErrorPage } from "./errorPage/ErrorPage";
