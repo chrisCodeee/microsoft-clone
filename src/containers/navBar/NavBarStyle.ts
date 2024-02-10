@@ -1,28 +1,44 @@
 import styled from "styled-components";
 
-const LogoContainer = styled.div`
-	width: 108px;
-	cursor: pointer;
-	transform: translateY(-4px);
-`;
-const Logo = styled.img`
-	width: 100%;
-	object-fit: cover;
-`;
 const Nav = styled.nav`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	height: 5.5rem;
 `;
 const NavList = styled.ul`
 	list-style: none;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+`;
+
+const Span = styled.span`
+	font-size: 1.3rem;
+	padding-bottom: 0.2rem;
+	border-bottom: 2px solid transparent;
+	transition: all 0.2s;
+
+	&:hover,
+	&:focus {
+		border-bottom: 2px solid #000;
+	}
 `;
 const NavListItems = styled.li`
 	cursor: pointer;
-	margin-right: 2rem;
+	margin-right: 1.5rem;
+
+	&:active {
+		border: 1px dotted #000;
+		padding: 0.5rem;
+	}
+
+	@media (min-width: 1200px) {
+		margin-right: 2rem;
+	}
 `;
 
-export { LogoContainer, Logo, NavList, NavListItems, Nav };
+const Icon = styled.span`
+	margin-left: 0.5rem;
+`;
+
+export { NavList, NavListItems, Nav, Span, Icon };

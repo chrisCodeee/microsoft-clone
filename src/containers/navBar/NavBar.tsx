@@ -1,52 +1,29 @@
-import { Link } from "react-router-dom";
-import logo from "../../assets/microsoft.svg";
-import { Logo, LogoContainer, NavList, NavListItems, Nav } from "./NavBarStyle";
+import NavBarSmallMedia from "./NavBarSmallMedia";
+import NavBarLargerMedia from "./NavBarLargerMedia";
+import { Search } from "../../components";
+import useNavState from "../../stateMangement/useNavState";
 
 type MainLinks = {
 	link: string;
 	name: string;
 };
-type SideLinks = {
-	link: string;
-	name: string;
-	icon: string;
-};
 
-interface Links {
+export interface Links {
 	mainLinks: MainLinks[];
-	sideLinks: SideLinks[];
 }
 
-const NavBar = ({ mainLinks, sideLinks }: Links) => {
+const NavBar = ({ mainLinks }: Links) => {
+	const { state } = useNavState();
 	return (
-		<Nav>
-			<div className="d-flex">
-				<LogoContainer>
-					<Link to="/" className="logo-link">
-						<Logo src={logo} alt="microsoft logo" />
-					</Link>
-				</LogoContainer>
-				<NavList>
-					{mainLinks.map((elements) => (
-						<>
-							<NavListItems>
-								<Link to={elements.link}>{elements.name}</Link>
-							</NavListItems>
-						</>
-					))}
-				</NavList>
-			</div>
-			<NavList>
-				{sideLinks.map((elements) => (
-					<>
-						<NavListItems>
-							<Link to={elements.link}>{elements.name}</Link>
-							<span>{elements.icon}</span>
-						</NavListItems>
-					</>
-				))}
-			</NavList>
-		</Nav>
+		<>
+			<div>{!state && <Search />}</div>
+
+			{/* Small Media Nzvigation */}
+			{state && <NavBarSmallMedia />}
+
+			{/* Larger Media Navigation */}
+			{state && <NavBarLargerMedia mainLinks={mainLinks} />}
+		</>
 	);
 };
 
