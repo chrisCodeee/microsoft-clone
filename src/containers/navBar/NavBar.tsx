@@ -3,16 +3,7 @@ import NavBarLargerMedia from "./NavBarLargerMedia";
 import { Search } from "../../components";
 import useNavState from "../../stateMangement/useNavState";
 
-type MainLinks = {
-	link: string;
-	name: string;
-};
-
-export interface Links {
-	mainLinks: MainLinks[];
-}
-
-const NavBar = ({ mainLinks }: Links) => {
+const NavBar = () => {
 	const { state } = useNavState();
 	return (
 		<>
@@ -22,7 +13,7 @@ const NavBar = ({ mainLinks }: Links) => {
 			{state && <NavBarSmallMedia />}
 
 			{/* Larger Media Navigation */}
-			{state && <NavBarLargerMedia mainLinks={mainLinks} />}
+			{state && <NavBarLargerMedia />}
 		</>
 	);
 };

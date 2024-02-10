@@ -1,14 +1,16 @@
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { NavList, NavListItems, Span, Icon, Nav } from "./NavBarStyle";
-import { Links } from "./NavBar";
 import Logo from "../../components/Logo/Logo";
 import { LiaSearchSolid } from "react-icons/lia";
 import { PiShoppingCartLight, PiUserCirclePlusLight } from "react-icons/pi";
 import useNavState from "../../stateMangement/useNavState";
+import useHomeParams from "../../pages/homePage/useHomeParams";
 
-const NavBarLargerMedia = ({ mainLinks }: Links) => {
+const NavBarLargerMedia = () => {
 	const { searchOn } = useNavState();
+	const { mainLinks } = useHomeParams();
+
 	return (
 		<Nav className="d-none d-lg-flex">
 			<div className="d-flex">
