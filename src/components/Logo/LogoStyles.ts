@@ -12,6 +12,10 @@ const LogoContainer = styled.div`
 		border-bottom: 0;
 		border-bottom-color: transparent;
 	}
+
+	@media screen and (max-width: 992px) {
+		width: 120px;
+	}
 `;
 const LogoImage = styled.img``;
 export { LogoContainer, LogoImage };
