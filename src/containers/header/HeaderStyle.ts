@@ -10,15 +10,15 @@ const TextContainer = styled.div`
 	left: 0%;
 	transform: translate(20%, -50%);
 	width: 40%;
-	padding: 40px;
+	padding: 4rem;
 
 	@media screen and (max-width: 1024px) {
 		& {
 			position: relative;
 			transform: translate(0%, 0%);
-			width: 90%;
+			width: 100%;
 			margin: 2rem auto;
-			padding: 0;
+			padding: 0 2.3rem;
 		}
 	}
 `;
