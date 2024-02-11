@@ -32,16 +32,152 @@ h1 {
 
 .btn {
 	font-size: inherit;
-	padding: 1rem 1.2rem;
-	font-weight: 600;
+	padding: 0.6rem 1.2rem;
+	font-weight: 400;
 	background-color: rgb(0, 103, 184);
 }
 .btn:hover {
 	background-color: rgb(11, 96, 160);
 }
 
+.carousel {
+	position: relative;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+	position: absolute;
+	height: fit-content;
+	width: fit-content;
+
+	top: 100%;
+	margin-top: 20px;
+}
+
+.carousel-control-prev {
+	left: 45%;
+}
+
+.carousel-control-next {
+	right: 45%;
+}
+
+.carousel-control-prev-icon {
+	background-image: url("./assets/211689_left_arrow_icon.svg");
+	transition: all 0.5s;
+}
+
+.carousel-control-prev-icon:hover {
+	transform: translateX(-10px);
+}
+
+.carousel-control-next-icon {
+	background-image: url("./assets/211607_right_arrow_icon.svg");
+	transition: all 0.5s;
+}
+
+.carousel-control-next-icon:hover {
+	transform: translateX(10px);
+}
+
+.carousel-indicators {
+	height: fit-content;
+	position: absolute;
+	transform: translate(0, 25px);
+	top: 100%;
+	left: 33%;
+	width: fit-content;
+}
+
+.carousel-indicators [data-bs-target] {
+	background-clip: border-box;
+	height: 10px;
+	width: 10px;
+	border-radius: 100%;
+	display: block;
+	opacity: 1;
+	border: 1px solid #000;
+}
+
+.carousel-indicators [data-bs-target]:not(:last-child) {
+	margin-right: 3.2rem;
+}
+
+.carousel-indicators .active {
+	opacity: 1;
+	background-color: black;
+}
+
+@media screen and (max-width: 1400px) {
+	.carousel-control-next {
+		right: 44%;
+	}
+
+	.carousel-control-prev {
+		left: 45%;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.carousel-control-next {
+		right: 42%;
+	}
+
+	.carousel-control-prev {
+		left: 45%;
+	}
+}
+
 @media screen and (max-width: 992px) {
 	h1 {
 		font-size: 2.4rem;
+	}
+
+	.carousel-control-next {
+		right: 38%;
+	}
+
+	.carousel-control-prev {
+		left: 40%;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.carousel-control-next {
+		right: 32%;
+	}
+
+	.carousel-control-prev {
+		left: 38%;
+	}
+}
+
+@media screen and (max-width: 490px) {
+	.carousel-control-next {
+		right: 25%;
+	}
+
+	.carousel-control-prev {
+		left: 35%;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.carousel-control-next {
+		right: 18%;
+	}
+
+	.carousel-control-prev {
+		left: 32%;
+	}
+}
+
+@media screen and (max-width: 290px) {
+	.carousel-control-next {
+		right: 10%;
+	}
+
+	.carousel-control-prev {
+		left: 25%;
 	}
 }

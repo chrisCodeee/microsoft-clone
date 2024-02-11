@@ -18,7 +18,7 @@ const TextContainer = styled.div`
 			transform: translate(0%, 0%);
 			width: 100%;
 			margin: 2rem auto;
-			padding: 0 2.3rem;
+			padding: 0;
 		}
 	}
 `;

@@ -14,7 +14,7 @@ const LogoContainer = styled.div`
 	}
 
 	@media screen and (max-width: 992px) {
-		width: 150px;
+		width: 120px;
 	}
 `;
 const LogoImage = styled.img``;
