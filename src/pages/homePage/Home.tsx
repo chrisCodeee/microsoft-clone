@@ -1,4 +1,4 @@
-import { Header, NavBar } from "../../containers";
+import { Header, NavBar, ShopContainer } from "../../containers";
 
 const HomePage = () => {
 	return (
@@ -9,7 +9,9 @@ const HomePage = () => {
 			<div className="container-fluid">
 				<Header />
 			</div>
-			<div className="container"></div>
+			<div className="container mt-big">
+				<ShopContainer />
+			</div>
 		</>
 	);
 };

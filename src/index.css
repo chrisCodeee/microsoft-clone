@@ -30,6 +30,20 @@ h1 {
 	color: #000;
 }
 
+/* Utility classes */
+
+.mt-big {
+	margin-top: 10rem;
+}
+
+.link {
+	text-decoration: underline;
+	color: rgb(0, 103, 184);
+	font-weight: 500;
+}
+
+/* Utility classes */
+
 .btn {
 	font-size: inherit;
 	padding: 0.6rem 1.2rem;
