@@ -1,40 +1,69 @@
-import { Assessories } from "..";
-import { ControlBtn } from "../assessories/AssessoriesStyle";
-import { ImageLarge, ImageSmall, TextContainer } from "../../containers/header/HeaderStyle";
+import { AccessoriesConatiner, ControlBtn, ImageLarge, ImageSmall, Text, TextContainer } from "./AssessoriesStyle";
 import { IoIosPlayCircle } from "react-icons/io";
 import { IoPauseCircleOutline } from "react-icons/io5";
-import { Link } from "react-router-dom";
 import Carousel from "react-bootstrap/Carousel";
-import LaptopImage from "../../assets/Highlight-Surface-Laptop-5-Refresh-Test_VP5-1920x600.avif";
-import CopilotImage from "../../assets/copilot-image-large.jfif";
-import CopilotImageSmallMedia from "../../assets/copilot-image-small.avif";
-import LaptopImageSmallMedia from "../../assets/Highlight-Surface-Laptop-5-Refresh-Test_VP2-859x540-small-media.avif";
 import useCarousel from "../../stateMangement/useCarousel";
+import { Link } from "react-router-dom";
 
-const AccessoriesCarousel = () => {
+interface Props {
+	image_1_Large: string;
+	image_1_Small: string;
+	image_2_Small: string;
+	image_2_Large: string;
+	heading_1: string;
+	text_1: string;
+	btnText_1: string;
+	heading_2: string;
+	text_2: string;
+	btnText_2: string;
+}
+
+const AccessoriesCarousel = ({
+	image_1_Large,
+	image_1_Small,
+	image_2_Large,
+	image_2_Small,
+	heading_1,
+	text_1,
+	btnText_1,
+	heading_2,
+	text_2,
+	btnText_2,
+}: Props) => {
 	const { state, play, pause } = useCarousel();
+
 	return (
 		<div>
 			<Carousel>
 				<Carousel.Item>
 					<Link to="">
-						<ImageLarge src={LaptopImage} alt="Laptop 5 Image" />
-						<ImageSmall src={LaptopImageSmallMedia} alt="Laptop 5 Image" />
+						<ImageLarge src={image_1_Large} alt="Laptop 5 Image" />
+						<ImageSmall src={image_1_Small} alt="Laptop 5 Image" />
 						<TextContainer>
-							<Assessories />
+							<AccessoriesConatiner>
+								<h1>{heading_1}</h1>
+								<Text>{text_1}</Text>
+								<button className="btn btn-primary">{btnText_1}</button>
+							</AccessoriesConatiner>
 						</TextContainer>
 					</Link>
 				</Carousel.Item>
+
 				<Carousel.Item>
 					<Link to="">
-						<ImageLarge src={CopilotImage} alt="Laptop 5 Image" />
-						<ImageSmall src={CopilotImageSmallMedia} alt="Laptop 5 Image" />
+						<ImageLarge src={image_2_Large} alt="Laptop 5 Image" />
+						<ImageSmall src={image_2_Small} alt="Laptop 5 Image" />
 						<TextContainer>
-							<Assessories />
+							<AccessoriesConatiner>
+								<h1>{heading_2}</h1>
+								<Text>{text_2}</Text>
+								<button className="btn btn-primary">{btnText_2}</button>
+							</AccessoriesConatiner>
 						</TextContainer>
 					</Link>
 				</Carousel.Item>
 			</Carousel>
+
 			<ControlBtn>
 				{state && <IoPauseCircleOutline onClick={pause} size={25.2} />}
 				{!state && <IoIosPlayCircle size={25} onClick={play} />}
