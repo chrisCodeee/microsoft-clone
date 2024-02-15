@@ -12,7 +12,7 @@ type MainLinks = {
 	name: string;
 };
 
-type CardDetails = {
+export type CardDetails = {
 	cardImage: string;
 	cardTitle: string;
 	cardText: string;

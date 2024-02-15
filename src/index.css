@@ -87,10 +87,6 @@ h2 {
 	background-color: rgb(11, 96, 160);
 }
 
-.carousel {
-	position: relative;
-}
-
 .carousel-control-prev,
 .carousel-control-next {
 	position: absolute;

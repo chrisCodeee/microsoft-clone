@@ -12,6 +12,7 @@ const TextContainer = styled.div`
 		& {
 			position: relative;
 			transform: translate(0%, 0%);
+			left: 0% !important;
 			width: 100%;
 			margin: 2rem auto;
 			padding: 0;

@@ -1,10 +1,13 @@
 import { Card } from "../../components";
-import useHomeParams from "../../pages/homePage/useHomeParams";
+import { CardDetails } from "../../pages/homePage/useHomeParams";
 
-const CardContainer = () => {
-	const { cardDetails } = useHomeParams();
+interface Props {
+	cardDetails: CardDetails[];
+}
+
+const CardContainer = ({ cardDetails }: Props) => {
 	return (
-		<div className="row mt-4 g-4">
+		<div className="row mt-4 g-5">
 			{cardDetails.map(({ cardImage, cardTitle, cardText, cardLinkText1, cardBadge, cardLinkText2, icon }) => (
 				<div key={cardText} className="col-12 col-lg-6 col-xl-3">
 					<Card
