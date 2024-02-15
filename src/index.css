@@ -30,6 +30,14 @@ h1 {
 	color: #000;
 }
 
+h2 {
+	font-size: 2.6rem;
+}
+
+.mainContainer {
+	width: 90%;
+}
+
 /* Utility classes */
 
 .mt-big {
@@ -40,8 +48,33 @@ h1 {
 	text-decoration: underline;
 	color: rgb(0, 103, 184);
 	font-weight: 500;
+	transition: all 0.5s;
 }
 
+.card-link {
+	text-decoration: none;
+	display: inline-block;
+}
+
+.card-link:hover {
+	text-decoration: underline;
+}
+
+.card-badge {
+	background-color: rgb(255, 185, 0);
+	padding: 0.3rem 1.2rem;
+	display: inline-block;
+	font-weight: 500;
+}
+
+.icon {
+	transition: all 0.3s;
+	font-weight: lighter;
+}
+
+.card-link:hover .icon {
+	transform: translateX(1rem);
+}
 /* Utility classes */
 
 .btn {

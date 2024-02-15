@@ -4,7 +4,7 @@ const TextContainer = styled.div`
 	position: absolute;
 	top: 50%;
 	left: 0%;
-	transform: translate(20%, -50%);
+	transform: translate(15%, -50%);
 	width: 40%;
 	padding: 4rem;
 

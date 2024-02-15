@@ -1,4 +1,5 @@
 import { Header, NavBar, ShopContainer } from "../../containers";
+import CardContainer from "../../containers/cardContainer/CardContainer";
 
 const HomePage = () => {
 	return (
@@ -9,8 +10,9 @@ const HomePage = () => {
 			<div className="container-fluid">
 				<Header />
 			</div>
-			<div className="container mt-big">
+			<div className="mainContainer mx-auto mt-big">
 				<ShopContainer />
+				<CardContainer />
 			</div>
 		</>
 	);
