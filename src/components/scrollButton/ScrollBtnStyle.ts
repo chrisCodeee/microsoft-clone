@@ -7,7 +7,7 @@ const BtnScroll = styled.div`
 	background-color: rgba(0, 0, 0, 0.15);
 	border-radius: 2px;
 	display: inline-block;
-	margin-top: 15px;
+	margin-top: 8px;
 
 	@media screen and (min-width: 1024px) {
 		position: fixed;
