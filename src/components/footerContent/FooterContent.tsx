@@ -16,7 +16,7 @@ const FooterContent = ({ items, text }: Props) => {
 			</p>
 			<div style={{ listStyle: "none" }}>
 				{items.map(({ name, link }) => (
-					<li className="mb-4 fs-5">
+					<li className="mb-4 fs-5" key={name}>
 						<Link to={link} className="card-link">
 							{name}
 						</Link>

@@ -7,12 +7,12 @@ const BtnScroll = styled.div`
 	background-color: rgba(0, 0, 0, 0.15);
 	border-radius: 2px;
 	display: inline-block;
-	// margin-top: 15px;
-	position: fixed;
-	bottom: 1%;
-	right: 1%;
+	margin-top: 15px;
 
 	@media screen and (min-width: 1024px) {
+		position: fixed;
+		bottom: 1%;
+		right: 1%;
 	}
 	&:hover {
 		background-color: #fff;
