@@ -41,8 +41,12 @@ li {
 footer * {
 	color: rgba(0, 0, 0, 0.65);
 }
+footer a {
+	color: rgba(0, 0, 0, 0.65);
+	font-size: 1.1rem;
+}
 
-footer *:hover {
+footer a:hover {
 	color: rgba(0, 0, 0);
 }
 

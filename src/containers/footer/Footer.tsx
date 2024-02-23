@@ -18,7 +18,7 @@ const Footer = () => {
 	];
 	return (
 		<>
-			<div className="d-flex flex-wrap justify-content-between">
+			<div className="d-flex flex-wrap justify-content-between pe-xxl-5">
 				<FooterContent items={newItems} text="What's new" />
 				<FooterContent items={store} text="Microsoft Store" />
 				<FooterContent items={education} text="Education" />
@@ -27,7 +27,7 @@ const Footer = () => {
 				<FooterContent items={company} text="Company" />
 			</div>
 
-			<div className="fs-5 mt-3 d-flex flex-column flex-xxl-row justify-content-between">
+			<div className="mt-3 d-flex flex-column flex-xxl-row justify-content-between">
 				<div className="d-flex flex-wrap mb-5 mb-sm-0">
 					<div className="me-5 mb-4 mb-xxl-0">
 						<Link to="" className="card- d-flex align-items-center">

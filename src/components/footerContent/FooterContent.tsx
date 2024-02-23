@@ -11,12 +11,10 @@ interface Props {
 const FooterContent = ({ items, text }: Props) => {
 	return (
 		<div className="py-3 pe-5">
-			<p className="mb-4" style={{ fontWeight: "600" }}>
-				{text}
-			</p>
+			<p style={{ fontWeight: "600" }}>{text}</p>
 			<div style={{ listStyle: "none" }}>
 				{items.map(({ name, link }) => (
-					<li className="mb-4 fs-5" key={name}>
+					<li className="mb-3" key={name}>
 						<Link to={link} className="card-link">
 							{name}
 						</Link>
