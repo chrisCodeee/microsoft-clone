@@ -49,6 +49,7 @@ const AccessoriesConatiner = styled.div`
 
 	@media screen and (max-width: 1024px) {
 		box-shadow: 0 5px 3px #eee;
+		color: #000 !important;
 	}
 `;
 const ControlBtn = styled.button`
