@@ -16,6 +16,8 @@ interface Props {
 	heading_2: string;
 	text_2: string;
 	btnText_2: string;
+	color?: string;
+	bgColor?: string;
 }
 
 const AccessoriesCarousel = ({
@@ -29,6 +31,8 @@ const AccessoriesCarousel = ({
 	heading_2,
 	text_2,
 	btnText_2,
+	color,
+	bgColor,
 }: Props) => {
 	const { state, play, pause } = useCarousel();
 
@@ -36,11 +40,18 @@ const AccessoriesCarousel = ({
 		<div>
 			<Carousel>
 				<Carousel.Item>
-					<Accessories imageLarge={image_1_Large} imageSmall={image_1_Small} heading={heading_1} text={text_1} btnText={btnText_1} />
+					<Accessories
+						imageLarge={image_1_Large}
+						imageSmall={image_1_Small}
+						heading={heading_1}
+						text={text_1}
+						btnText={btnText_1}
+						bgColor={bgColor}
+					/>
 				</Carousel.Item>
 
 				<Carousel.Item>
-					<Accessories imageLarge={image_2_Large} imageSmall={image_2_Small} heading={heading_2} text={text_2} btnText={btnText_2} />
+					<Accessories imageLarge={image_2_Large} imageSmall={image_2_Small} heading={heading_2} text={text_2} btnText={btnText_2} color={color} />
 				</Carousel.Item>
 			</Carousel>
 

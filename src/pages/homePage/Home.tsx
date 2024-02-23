@@ -1,4 +1,5 @@
 import { CardContainer, Header, NavBar, SeriesContainer, ShopContainer } from "../../containers";
+import SectionAI from "../../containers/sectionAI/SectionAI";
 import useHomeParams from "./useHomeParams";
 
 const HomePage = () => {
@@ -18,6 +19,7 @@ const HomePage = () => {
 				<div className="mt-big">
 					<CardContainer cardDetails={cardDetails_2} heading="For business" />
 				</div>
+				<SectionAI />
 			</div>
 		</>
 	);
