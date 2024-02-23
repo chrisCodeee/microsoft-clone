@@ -2,6 +2,10 @@ import { create } from "zustand";
 
 import surfacePro from "../../assets/Content-Card-Test-Surface-Pro-9-Contextual-Lifestyle-01.webp";
 import surfaceLaptop from "../../assets/Content-Card-Surface-Laptop-Studio-2-CONS-M001.webp";
+import surfaceLaptop_2 from "../../assets/Content-Card-Surface-Laptop-5-LIfestyle-M2.webp";
+import copilotImage from "../../assets/Content-Card-Copilot-Commercial.avif";
+import microsoftTeamImage from "../../assets/gldn-CP-Microsoft-Teams-Commercial.webp";
+import azureImage from "../../assets/Content-Card-Azure-AI-Bloom.avif";
 import microsoftIcon from "../../assets/Content-Card-Microsoft-365-Lifestyle-Sandstone-Icon-Toss.avif";
 import xboxImage from "../../assets/Content-Card-Xbox-Series-S-1TB-Black-Merch-01.avif";
 import { MdKeyboardArrowRight } from "react-icons/md";
@@ -25,6 +29,7 @@ export type CardDetails = {
 interface Links {
 	mainLinks: MainLinks[];
 	cardDetails: CardDetails[];
+	cardDetails_2: CardDetails[];
 }
 const useHomeParams = create<Links>(() => ({
 	mainLinks: [
@@ -38,6 +43,7 @@ const useHomeParams = create<Links>(() => ({
 		{ name: "Small Business", link: "/business" },
 		{ name: "Support", link: "/support" },
 	],
+
 	cardDetails: [
 		{
 			cardImage: surfacePro,
@@ -66,6 +72,34 @@ const useHomeParams = create<Links>(() => ({
 			cardTitle: "Power your dreams",
 			cardText: "Introducing Xbox Series S in Carbon Black, now with a 1 TB SSD. Experience next-gen speed and performance.",
 			cardLinkText1: "Shop now",
+		},
+	],
+
+	cardDetails_2: [
+		{
+			cardImage: surfaceLaptop_2,
+			cardTitle: "Save up to $250 on Surface Laptop 5 for Business",
+			cardText: "Lightning-fast performance, built-in security and sleek portability designed for your small business. Offer ends 2/23.",
+			cardLinkText1: "Shop now",
+		},
+		{
+			cardImage: copilotImage,
+			cardTitle: "Copilot for Microsoft 365",
+			cardText: "Save time and focus on the things that matter most with AI in Microsoft 365 for business",
+			cardLinkText1: "Learn more",
+			cardBadge: <p className="card-badge">New</p>,
+		},
+		{
+			cardImage: microsoftTeamImage,
+			cardTitle: "Get Microsoft Teams for free",
+			cardText: "Online meetings, chat, and shared cloud storage—all in one place.",
+			cardLinkText1: "Sign up for free",
+		},
+		{
+			cardImage: azureImage,
+			cardTitle: "Join the era of AI",
+			cardText: "Create, communicate, and code with the latest Microsoft AI solutions.",
+			cardLinkText1: "Explore AI solutions",
 		},
 	],
 }));

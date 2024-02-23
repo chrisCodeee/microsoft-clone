@@ -3,11 +3,13 @@ import { CardDetails } from "../../pages/homePage/useHomeParams";
 
 interface Props {
 	cardDetails: CardDetails[];
+	heading?: string;
 }
 
-const CardContainer = ({ cardDetails }: Props) => {
+const CardContainer = ({ cardDetails, heading }: Props) => {
 	return (
-		<div className="row mt-4 g-5">
+		<div className="row g-5">
+			<h1>{heading}</h1>
 			{cardDetails.map(({ cardImage, cardTitle, cardText, cardLinkText1, cardBadge, cardLinkText2, icon }) => (
 				<div key={cardText} className="col-12 col-lg-6 col-xl-3">
 					<Card

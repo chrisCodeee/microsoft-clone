@@ -2,7 +2,7 @@ import { CardContainer, Header, NavBar, SeriesContainer, ShopContainer } from ".
 import useHomeParams from "./useHomeParams";
 
 const HomePage = () => {
-	const { cardDetails } = useHomeParams();
+	const { cardDetails, cardDetails_2 } = useHomeParams();
 	return (
 		<>
 			<div className="container-fluid container-xl">
@@ -16,7 +16,7 @@ const HomePage = () => {
 				<CardContainer cardDetails={cardDetails} />
 				<SeriesContainer />
 				<div className="mt-big">
-					<CardContainer cardDetails={cardDetails} />
+					<CardContainer cardDetails={cardDetails_2} heading="For business" />
 				</div>
 			</div>
 		</>
