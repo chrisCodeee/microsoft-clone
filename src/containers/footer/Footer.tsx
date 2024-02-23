@@ -28,7 +28,7 @@ const Footer = () => {
 			</div>
 
 			<div className="mt-3 d-flex flex-column flex-xxl-row justify-content-between">
-				<div className="d-flex flex-wrap mb-5 mb-sm-0">
+				<div className="d-flex flex-wrap mb-4 mb-sm-0">
 					<div className="me-5 mb-4 mb-xxl-0">
 						<Link to="" className="card- d-flex align-items-center">
 							<LiaGlobeAmericasSolid size={22} className="me-3" /> English (United States)
