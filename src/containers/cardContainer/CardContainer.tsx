@@ -11,7 +11,7 @@ const CardContainer = ({ cardDetails, heading }: Props) => {
 		<div className="row g-5">
 			<h1>{heading}</h1>
 			{cardDetails.map(({ cardImage, cardTitle, cardText, cardLinkText1, cardBadge, cardLinkText2, icon }) => (
-				<div key={cardText} className="col-12 col-lg-6 col-xl-3">
+				<div key={cardText} className="col-12 col-md-6 col-xl-3">
 					<Card
 						cardImage={cardImage}
 						cardTitle={cardTitle}
