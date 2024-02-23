@@ -1,5 +1,5 @@
 import ScrollBtn from "../../components/scrollButton/ScrollBtn";
-import { CardContainer, Header, NavBar, SeriesContainer, ShopContainer, SocialMediaIconContainer } from "../../containers";
+import { CardContainer, Footer, Header, NavBar, SeriesContainer, ShopContainer, SocialMediaIconContainer } from "../../containers";
 import SectionAI from "../../containers/sectionAI/SectionAI";
 import useHomeParams from "./useHomeParams";
 
@@ -26,6 +26,11 @@ const HomePage = () => {
 					<ScrollBtn />
 				</div>
 			</div>
+			<footer className="mt-big py-5" style={{ backgroundColor: "rgb(242, 242, 242" }}>
+				<div className="mainContainer mx-auto">
+					<Footer />
+				</div>
+			</footer>
 		</>
 	);
 };
