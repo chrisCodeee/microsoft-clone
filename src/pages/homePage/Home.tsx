@@ -1,4 +1,4 @@
-import { CardContainer, Header, NavBar, SeriesContainer, ShopContainer } from "../../containers";
+import { CardContainer, Header, NavBar, SeriesContainer, ShopContainer, SocialMediaIconContainer } from "../../containers";
 import SectionAI from "../../containers/sectionAI/SectionAI";
 import useHomeParams from "./useHomeParams";
 
@@ -20,6 +20,9 @@ const HomePage = () => {
 					<CardContainer cardDetails={cardDetails_2} heading="For business" />
 				</div>
 				<SectionAI />
+				<div className="mt-big">
+					<SocialMediaIconContainer />
+				</div>
 			</div>
 		</>
 	);
