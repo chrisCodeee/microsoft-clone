@@ -28,8 +28,8 @@ const Footer = () => {
 			</div>
 
 			<div className="mt-3 d-flex flex-column flex-xxl-row justify-content-between">
-				<div className="d-flex flex-wrap mb-4 mb-sm-0">
-					<div className="me-5 mb-4 mb-xxl-0">
+				<div className="d-flex flex-wrap">
+					<div className="me-5 mb-2 mb-xxl-0">
 						<Link to="" className="card- d-flex align-items-center">
 							<LiaGlobeAmericasSolid size={22} className="me-3" /> English (United States)
 						</Link>
@@ -43,7 +43,7 @@ const Footer = () => {
 
 				<div className="d-flex flex-wrap justify-content-start justify-content-lg-end mt-3 mt-xxl-0">
 					{footerLinks.map(({ name, link, copy }) => (
-						<li key={name} className="me-5 py-2 py-xxl-0">
+						<li key={name} className="me-3 me-xxl-5 pt-2 py-xxl-0">
 							<Link to={link} className="card-link">
 								{copy}
 								{name}
