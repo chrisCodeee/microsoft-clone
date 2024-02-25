@@ -9,7 +9,7 @@ const NavBarMobileView = () => {
 			<ul style={{ listStyle: "none", padding: "0" }}>
 				{mainLinks.map(({ name, link }) => (
 					<li key={name} className="py-3 ps-4" style={{ borderBottom: "1px solid rgba(204, 204, 204, 0.4)" }}>
-						<Link to={link} className="card-link">
+						<Link to={link}>
 							<Span>{name}</Span>
 						</Link>
 					</li>
