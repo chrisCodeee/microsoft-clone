@@ -30,8 +30,12 @@ interface Links {
 	mainLinks: MainLinks[];
 	cardDetails: CardDetails[];
 	cardDetails_2: CardDetails[];
+	state: boolean;
+	mobileON: () => void;
 }
-const useHomeParams = create<Links>(() => ({
+const useHomeParams = create<Links>((set) => ({
+	state: false,
+	mobileON: () => set((store) => ({ state: !store.state })),
 	mainLinks: [
 		{ name: "Microsoft 365", link: "/microsoft-365" },
 		{ name: "Teams", link: "/teams" },

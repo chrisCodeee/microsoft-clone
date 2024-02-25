@@ -5,3 +5,4 @@ export { default as Header } from "./header/Header";
 export { default as SeriesContainer } from "./series/SeriesContainer";
 export { default as CardContainer } from "./cardContainer/CardContainer";
 export { default as SocialMediaIconContainer } from "./socialMediaIconContainer/SocialMediaIconContainer";
+export { default as NavBarMobileView } from "./navBar/NavBarMobileView";
