@@ -4,7 +4,7 @@ import { Span } from "./NavBarStyle";
 import { Accordian } from "../../components";
 
 const NavBarMobileView = () => {
-	const { mainLinks } = useHomeParams();
+	const { mainLinks, accordionLinks } = useHomeParams();
 	return (
 		<>
 			<div style={{ width: "100vw", backgroundColor: "rgb(242, 242, 242)" }}>
@@ -19,12 +19,9 @@ const NavBarMobileView = () => {
 				</ul>
 			</div>
 			<div style={{ width: "100vw", backgroundColor: "rgb(242, 242, 242)", marginTop: "-10px" }}>
-				<Accordian />
-				<Accordian />
-				<Accordian />
-				<Accordian />
-				<Accordian />
-				<Accordian />
+				{accordionLinks.map(({ heading, links }) => (
+					<Accordian accordionLink={links} accordHeading={heading} />
+				))}
 			</div>
 		</>
 	);

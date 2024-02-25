@@ -11,7 +11,7 @@ import xboxImage from "../../assets/Content-Card-Xbox-Series-S-1TB-Black-Merch-0
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { ReactNode } from "react";
 
-type MainLinks = {
+export type MainLinks = {
 	link: string;
 	name: string;
 };
@@ -25,6 +25,10 @@ export type CardDetails = {
 	cardLinkText2?: string;
 	icon?: ReactNode;
 };
+export type AccordionLink = {
+	heading: string;
+	links?: MainLinks[];
+};
 
 interface Links {
 	mainLinks: MainLinks[];
@@ -32,6 +36,7 @@ interface Links {
 	cardDetails_2: CardDetails[];
 	state: boolean;
 	mobileON: () => void;
+	accordionLinks: AccordionLink[];
 }
 const useHomeParams = create<Links>((set) => ({
 	state: false,
@@ -47,7 +52,80 @@ const useHomeParams = create<Links>((set) => ({
 		{ name: "Small Business", link: "/business" },
 		{ name: "Support", link: "/support" },
 	],
-
+	accordionLinks: [
+		{
+			heading: "Software",
+			links: [
+				{ name: "Windows Apps", link: "" },
+				{ name: "AI", link: "" },
+				{ name: "Outlook", link: "" },
+				{ name: "OneDrive", link: "" },
+				{ name: "Microsoft Teams", link: "" },
+				{ name: "OneNote", link: "" },
+				{ name: "Microsoft Edge", link: "" },
+				{ name: "Skype", link: "" },
+			],
+		},
+		{
+			heading: "PCs & Devices",
+			links: [
+				{ name: "Computers", link: "" },
+				{ name: "Shop Xbox", link: "" },
+				{ name: "Accessories", link: "" },
+				{ name: "VR & mixed reality", link: "" },
+				{ name: "Certified Refurbished", link: "" },
+				{ name: "Trade-in for cash", link: "" },
+			],
+		},
+		{
+			heading: "Entertainment",
+			links: [
+				{ name: "Xbox Game Pass Ultimate", link: "" },
+				{ name: "PC Game Pass", link: "" },
+				{ name: "Xbox games", link: "" },
+				{ name: "PC and Windows games", link: "" },
+				{ name: "Movies & TV", link: "" },
+			],
+		},
+		{
+			heading: "Business",
+			links: [
+				{ name: "Microsoft Cloud", link: "" },
+				{ name: "Microsoft Security", link: "" },
+				{ name: "Dynamics 365", link: "" },
+				{ name: "Microsoft Power Platform", link: "" },
+				{ name: "Windows 365", link: "" },
+				{ name: "Microsoft Industry", link: "" },
+				{ name: "Small Business", link: "" },
+			],
+		},
+		{
+			heading: "Developer & IT",
+			links: [
+				{ name: "Azure", link: "" },
+				{ name: "Developer Center", link: "" },
+				{ name: "Documentation", link: "" },
+				{ name: "Microsoft Tech Community", link: "" },
+				{ name: "Azure Marketplace", link: "" },
+				{ name: "AppSource", link: "" },
+				{ name: "Visual Studio", link: "" },
+			],
+		},
+		{
+			heading: "Other",
+			links: [
+				{ name: "Microsoft Rewards", link: "" },
+				{ name: "Free downloads & security", link: "" },
+				{ name: "Education", link: "" },
+				{ name: "Gift cards", link: "" },
+				{ name: "Licensing", link: "" },
+				{ name: "Unlocked stories", link: "" },
+			],
+		},
+		{
+			heading: "View Sitemap",
+		},
+	],
 	cardDetails: [
 		{
 			cardImage: surfacePro,
