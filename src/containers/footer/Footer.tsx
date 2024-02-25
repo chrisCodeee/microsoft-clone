@@ -41,9 +41,9 @@ const Footer = () => {
 					</div>
 				</div>
 
-				<div className="d-flex flex-wrap justify-content-start justify-content-md-center justify-content-lg-end mt-3 mt-xxl-0">
+				<div className="d-flex flex-wrap justify-content-start justify-content-md-end mt-3 mt-xxl-0">
 					{footerLinks.map(({ name, link, copy }) => (
-						<li key={name} className="me-3 me-xxl-5 pt-2 py-xxl-0">
+						<li key={name} className="me-3 me-md-4 me-xxl-5 pt-2 py-xxl-0">
 							<Link to={link} className="card-link">
 								{copy}
 								{name}
