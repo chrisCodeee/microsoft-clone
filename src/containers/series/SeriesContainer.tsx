@@ -1,16 +1,16 @@
 import { Accessories } from "../../components";
-import xboxImageLarge from "../../assets/Highlight-Xbox-Series-S-Light-Background_VP5-1596x600.avif";
-import xboxImageSmall from "../../assets/Content-Card-Xbox-Series-S-1TB-Black-Merch-01.avif";
+import xboxImageLarge from "../../assets/Xbox_Large.webp";
+import xboxImageSmall from "../../assets/Xbox_Small.webp";
 const SeriesContainer = () => {
 	return (
 		<div>
 			<Accessories
 				imageLarge={xboxImageLarge}
 				imageSmall={xboxImageSmall}
-				heading="Xbox Series X"
-				text="The fastest, most powerful Xbox ever"
-				btnText="Shop Xbox Series X"
-				position="50%"
+				heading="Save up to $44 on Xbox Wireless Controllers"
+				text="Save on select controllers designed for comfort, precision, and seamless sharing. Offer ends 3/3."
+				btnText="Shop Xbox controllers"
+				position="0"
 			/>
 		</div>
 	);
