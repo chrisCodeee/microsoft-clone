@@ -41,6 +41,7 @@ interface Links {
 const useHomeParams = create<Links>((set) => ({
 	state: false,
 	mobileON: () => set((store) => ({ state: !store.state })),
+
 	mainLinks: [
 		{ name: "Microsoft 365", link: "/microsoft-365" },
 		{ name: "Teams", link: "/teams" },
@@ -52,6 +53,7 @@ const useHomeParams = create<Links>((set) => ({
 		{ name: "Small Business", link: "/business" },
 		{ name: "Support", link: "/support" },
 	],
+
 	accordionLinks: [
 		{
 			heading: "Software",
@@ -93,6 +95,7 @@ const useHomeParams = create<Links>((set) => ({
 				{ name: "Microsoft Cloud", link: "" },
 				{ name: "Microsoft Security", link: "" },
 				{ name: "Dynamics 365", link: "" },
+				{ name: "Windows 365 for business", link: "" },
 				{ name: "Microsoft Power Platform", link: "" },
 				{ name: "Windows 365", link: "" },
 				{ name: "Microsoft Industry", link: "" },
@@ -105,6 +108,7 @@ const useHomeParams = create<Links>((set) => ({
 				{ name: "Azure", link: "" },
 				{ name: "Developer Center", link: "" },
 				{ name: "Documentation", link: "" },
+				{ name: "Microsoft Learn", link: "" },
 				{ name: "Microsoft Tech Community", link: "" },
 				{ name: "Azure Marketplace", link: "" },
 				{ name: "AppSource", link: "" },
@@ -121,9 +125,6 @@ const useHomeParams = create<Links>((set) => ({
 				{ name: "Licensing", link: "" },
 				{ name: "Unlocked stories", link: "" },
 			],
-		},
-		{
-			heading: "View Sitemap",
 		},
 	],
 	cardDetails: [

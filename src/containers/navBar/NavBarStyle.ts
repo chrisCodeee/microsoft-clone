@@ -23,6 +23,18 @@ const Span = styled.span`
 		border-bottom: 2px solid #000;
 	}
 `;
+
+const NavSpan = styled.span`
+	font-size: 1.3rem;
+	border-bottom: 1px solid transparent;
+	transition: all 0.2s;
+
+	&:hover,
+	&:focus {
+		border-bottom: 1px solid #000;
+	}
+`;
+
 const NavListItems = styled.li`
 	cursor: pointer;
 	margin-right: 1.5rem;
@@ -41,4 +53,4 @@ const Icon = styled.span`
 	margin-left: 0.5rem;
 `;
 
-export { NavList, NavListItems, Nav, Span, Icon };
+export { NavList, NavListItems, Nav, Span, Icon, NavSpan };

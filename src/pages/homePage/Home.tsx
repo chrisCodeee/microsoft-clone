@@ -1,15 +1,29 @@
 import ScrollBtn from "../../components/scrollButton/ScrollBtn";
-import { CardContainer, Footer, Header, NavBar, NavBarMobileView, SeriesContainer, ShopContainer, SocialMediaIconContainer } from "../../containers";
+import {
+	CardContainer,
+	DropdownContainer,
+	Footer,
+	Header,
+	NavBar,
+	NavBarMobileView,
+	SeriesContainer,
+	ShopContainer,
+	SocialMediaIconContainer,
+} from "../../containers";
 import SectionAI from "../../containers/sectionAI/SectionAI";
+import useNavState from "../../stateMangement/useNavState";
 import useHomeParams from "./useHomeParams";
 
 const HomePage = () => {
 	const { cardDetails, cardDetails_2, state } = useHomeParams();
+	const { dropdownState } = useNavState();
 	return (
 		<>
 			<div className="container-fluid container-xl" id="top">
 				<NavBar />
 			</div>
+
+			{dropdownState && <DropdownContainer />}
 
 			{state && <NavBarMobileView />}
 			{!state && (
@@ -17,6 +31,7 @@ const HomePage = () => {
 					<Header />
 				</div>
 			)}
+
 			<div className={`mainContainer mx-auto ${state ? "mt-0" : "mt-big"}`}>
 				<ShopContainer />
 				<CardContainer cardDetails={cardDetails} />
@@ -30,6 +45,7 @@ const HomePage = () => {
 					<ScrollBtn />
 				</div>
 			</div>
+
 			<footer className="mt-big py-5" style={{ backgroundColor: "rgb(242, 242, 242)" }}>
 				<div className="mainContainer mx-auto">
 					<Footer />

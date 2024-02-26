@@ -8,7 +8,7 @@ import useNavState from "../../stateMangement/useNavState";
 import useHomeParams from "../../pages/homePage/useHomeParams";
 
 const NavBarLargerMedia = () => {
-	const { searchOn } = useNavState();
+	const { searchOn, dropdownON } = useNavState();
 	const { mainLinks } = useHomeParams();
 
 	return (
@@ -28,7 +28,7 @@ const NavBarLargerMedia = () => {
 				</NavList>
 			</div>
 			<NavList>
-				<NavListItems>
+				<NavListItems onClick={dropdownON}>
 					<Link to="">
 						<Span>All Microsft</Span>
 						<Icon>

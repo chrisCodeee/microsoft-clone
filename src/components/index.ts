@@ -7,3 +7,4 @@ export { default as SocialMediaIcons } from "./sociaMediaIcons/SocialMediaIcons"
 export { default as ScrollBtn } from "./scrollButton/ScrollBtn";
 export { default as FooterContent } from "./footerContent/FooterContent";
 export { default as Accordian } from "./accordian/Accordian";
+export { default as Dropdown } from "./dropdown/Dropdown";
